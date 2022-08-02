@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1 class="display-4">Weather in Moscow</h1>
+  <p class="lead">This app is built with API from <a href="https://openweathermap.org">openweathermap.org</a></p>
+  <hr class="my-4">
+  <p>Current Day: <%= Date.today.strftime("%A, %B, %d") %> </p>
+  <p><%= @data["weather"].first["description"] %><p>
+  <p>Current temperature: <%= @data["main"]["temp"] %> Celcius</p>
+  <img src="http://openweathermap.org/img/wn/<%= @data["weather"].first["icon"]%>@2x.png" />
+  
+</div>
